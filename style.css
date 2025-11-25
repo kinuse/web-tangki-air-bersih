@@ -1,8 +1,7 @@
-/* GLOBAL & RESET */
 :root {
-    --primary-color: #007bff; /* Biru terang */
-    --secondary-color: #0056b3; /* Biru gelap */
-    --accent-color: #28a745; /* Hijau cerah untuk WhatsApp */
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --accent-color: #28a745;
     --text-color: #333;
     --light-bg: #f8f9fa;
     --dark-bg: #343a40;
@@ -29,7 +28,7 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 20px 0;
-    overflow: hidden; /* Clear floats */
+    overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -110,8 +109,6 @@ p {
     margin-right: 10px;
 }
 
-
-/* NAVBAR */
 .navbar {
     background-color: var(--dark-bg);
     color: var(--white);
@@ -126,7 +123,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Adjust padding for better look on edges */
+    padding: 0 20px;
 }
 
 .navbar .logo {
@@ -169,8 +166,6 @@ p {
     width: 100%;
 }
 
-
-/* HERO SECTION */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
@@ -178,7 +173,7 @@ p {
     text-align: center;
     display: flex;
     align-items: center;
-    min-height: 80vh; /* Make hero section taller */
+    min-height: 80vh;
 }
 
 .hero .container {
@@ -218,8 +213,6 @@ p {
     box-shadow: var(--shadow);
 }
 
-
-/* ABOUT US SECTION */
 .about-us .container {
     display: flex;
     flex-wrap: wrap;
@@ -244,8 +237,6 @@ p {
     box-shadow: var(--shadow);
 }
 
-
-/* FEATURES SECTION */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -278,8 +269,6 @@ p {
     margin-bottom: 15px;
 }
 
-
-/* PORTFOLIO SECTION */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -318,8 +307,6 @@ p {
     color: #555;
 }
 
-
-/* TESTIMONIAL SECTION */
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -356,8 +343,6 @@ p {
     font-weight: 600;
 }
 
-
-/* CONTACT US SECTION */
 .contact-us {
     text-align: center;
 }
@@ -378,8 +363,6 @@ p {
     margin-right: 10px;
 }
 
-
-/* FOOTER */
 footer {
     background-color: var(--dark-bg);
     color: var(--white);
@@ -389,7 +372,6 @@ footer {
     margin-top: 50px;
 }
 
-/* WHATSAPP STICKY BUTTON */
 .whatsapp-sticky-btn {
     position: fixed;
     bottom: 30px;
@@ -413,8 +395,6 @@ footer {
     transform: scale(1.1);
 }
 
-
-/* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
     .hero .container {
         flex-direction: column;
@@ -435,17 +415,17 @@ footer {
     }
 
     .about-image {
-        order: -1; /* Pindah gambar ke atas di mobile */
+        order: -1;
     }
 }
 
 @media (max-width: 768px) {
     .navbar .nav-links {
-        display: none; /* Sembunyikan menu navigasi di mobile */
+        display: none;
     }
 
     .navbar .container {
-        justify-content: center; /* Pusatkan logo */
+        justify-content: center;
     }
 
     h1 {
@@ -469,7 +449,7 @@ footer {
     }
 
     .feature-grid, .portfolio-grid, .testimonial-grid {
-        grid-template-columns: 1fr; /* Satu kolom untuk mobile */
+        grid-template-columns: 1fr;
     }
 
     .whatsapp-sticky-btn {
