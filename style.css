@@ -7,7 +7,9 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -40,7 +42,9 @@ h2 {
     margin-bottom: 12px;
 }
 
-p { margin-top: 14px; }
+p {
+    margin-top: 14px;
+}
 
 /* =====================
    NAVBAR
@@ -77,6 +81,7 @@ p { margin-top: 14px; }
     color: #e5e7eb;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -84,17 +89,12 @@ p { margin-top: 14px; }
 }
 
 /* =====================
-   HERO (PARALLAX)
+   HERO
 ===================== */
 .hero {
-    background:
-        linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.85)),
-        url("F1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: radial-gradient(circle at top left, #38bdf8, #0f172a 60%);
     color: #fff;
-    padding: 140px 0;
+    padding: 120px 0;
 }
 
 .hero .container {
@@ -114,6 +114,7 @@ p { margin-top: 14px; }
     font-size: 18px;
 }
 
+/* BADGE */
 .hero-badge {
     margin-top: 18px;
     font-size: 14px;
@@ -125,13 +126,13 @@ p { margin-top: 14px; }
     border-radius: 999px;
 }
 
+/* HERO IMAGE */
 .hero-image img {
     width: 100%;
     height: 420px;
     object-fit: cover;
     border-radius: 26px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    transition: transform 0.1s linear;
 }
 
 /* =====================
@@ -146,6 +147,12 @@ p { margin-top: 14px; }
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
 
 .btn-primary {
@@ -158,44 +165,6 @@ p { margin-top: 14px; }
     color: #fff;
     padding: 16px 36px;
     font-size: 18px;
-}
-
-/* =====================
-   PARALLAX DIVIDER
-===================== */
-/* PARALLAX FIX */
-.parallax-divider {
-    position: relative;
-    height: 320px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.parallax-bg {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.85)),
-        url("Findustri.jpg") center / cover no-repeat;
-    will-change: transform;
-}
-
-.parallax-divider h2 {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    font-size: 34px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.9s;
-}
-
-.parallax-divider h2.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* =====================
@@ -214,6 +183,11 @@ p { margin-top: 14px; }
     border-radius: 22px;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-6px);
 }
 
 .icon-large {
@@ -225,7 +199,9 @@ p { margin-top: 14px; }
 /* =====================
    SERVICES
 ===================== */
-.service-desc { font-size: 18px; }
+.service-desc {
+    font-size: 18px;
+}
 
 .service-list {
     margin-top: 40px;
@@ -262,6 +238,15 @@ p { margin-top: 14px; }
     padding: 32px;
     border-radius: 22px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+}
+
+.testimonial-card h4 {
+    margin-top: 16px;
 }
 
 /* =====================
@@ -279,12 +264,26 @@ p { margin-top: 14px; }
     border-radius: 22px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    background: #020617;
 }
 
 .gallery-item img {
     width: 100%;
     height: 240px;
     object-fit: cover;
+}
+
+/* OVERLAY */
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(2,6,23,0.85),
+        rgba(2,6,23,0.35),
+        rgba(2,6,23,0)
+    );
 }
 
 .caption {
@@ -294,8 +293,9 @@ p { margin-top: 14px; }
     padding: 18px;
     text-align: center;
     font-weight: 700;
-    color: #fff;
-    background: linear-gradient(to top, rgba(2,6,23,0.85), transparent);
+    font-size: 16px;
+    color: #ffffff;
+    z-index: 2;
 }
 
 /* =====================
@@ -312,30 +312,25 @@ footer {
    RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-    .hero {
-        background-attachment: scroll;
-        padding: 110px 0;
-    }
-
-    .parallax-divider {
-        background-attachment: scroll;
-        padding: 80px 20px;
-    }
-
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .nav-links { display: none; }
+    .nav-links {
+        display: none;
+    }
 
-    .hero h1 { font-size: 32px; }
+    .hero h1 {
+        font-size: 32px;
+    }
 
     .hero-image img {
         height: 280px;
         margin-top: 30px;
     }
 
-    .service-list li { font-size: 16px; }
+    .service-list li {
+        font-size: 16px;
+    }
 }
-
