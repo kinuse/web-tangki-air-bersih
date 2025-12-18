@@ -163,34 +163,34 @@ p { margin-top: 14px; }
 /* =====================
    PARALLAX DIVIDER
 ===================== */
+/* PARALLAX FIX */
 .parallax-divider {
-    background:
-        linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.85)),
-        url("Findustri.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 120px 0;
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-/* TEXT PUTIH + GRADIENT + FADE IN */
+.parallax-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.85)),
+        url("Findustri.jpg") center / cover no-repeat;
+    will-change: transform;
+}
+
 .parallax-divider h2 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
     font-size: 34px;
-    font-weight: 700;
-
-    /* fallback aman */
-    color: #ffffff;
-
-    /* gradient halus */
-    background: linear-gradient(180deg, #ffffff, #f1f5f9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 0 8px 30px rgba(0,0,0,0.6);
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
+    transition: 0.9s;
 }
 
 .parallax-divider h2.show {
@@ -338,3 +338,4 @@ footer {
 
     .service-list li { font-size: 16px; }
 }
+
