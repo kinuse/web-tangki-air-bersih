@@ -75,6 +75,11 @@
     </div>
 </section>
 
+<!-- PARALLAX DIVIDER -->
+<section class="parallax-divider">
+    <h2>Solusi Air Bersih Andal untuk Jabodetabek</h2>
+</section>
+
 <!-- FEATURES -->
 <section id="features" class="section-padding bg-light">
     <div class="container">
@@ -192,7 +197,6 @@
         <a 
             href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20memesan%20air%20bersih."
             target="_blank"
-            rel="noopener noreferrer"
             class="btn btn-whatsapp-large"
         >
             <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
@@ -207,6 +211,23 @@
     </div>
 </footer>
 
+<!-- PARALLAX JS (LIGHT & SAFE) -->
+<script>
+window.addEventListener("scroll", () => {
+    const img = document.querySelector(".hero-image img");
+    if (img) {
+        img.style.transform = `translateY(${window.scrollY * 0.15}px)`;
+    }
+
+    const dividerText = document.querySelector(".parallax-divider h2");
+    if (!dividerText) return;
+
+    const rect = dividerText.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        dividerText.classList.add("show");
+    }
+});
+</script>
+
 </body>
 </html>
-
