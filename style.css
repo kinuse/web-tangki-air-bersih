@@ -93,7 +93,7 @@ p {
 ===================== */
 .hero {
     background: radial-gradient(circle at top left, #38bdf8, #0f172a 60%);
-    color: #fff;
+    color: #ffffff;
     padding: 120px 0;
 }
 
@@ -162,7 +162,7 @@ p {
 
 .btn-whatsapp-large {
     background: linear-gradient(135deg, #25d366, #16a34a);
-    color: #fff;
+    color: #ffffff;
     padding: 16px 36px;
     font-size: 18px;
 }
@@ -178,7 +178,7 @@ p {
 }
 
 .feature-item {
-    background: #fff;
+    background: #ffffff;
     padding: 36px;
     border-radius: 22px;
     text-align: center;
@@ -234,7 +234,7 @@ p {
 }
 
 .testimonial-card {
-    background: #fff;
+    background: #ffffff;
     padding: 32px;
     border-radius: 22px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
