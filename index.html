@@ -70,7 +70,7 @@
     </div>
 
     <div class="hero-image" data-aos="fade-left">
-        <img src="f1.jpg" alt="Pengiriman air bersih Bintang Air wilayah Jabodetabek">
+        <img src="F1.jpg" alt="Pengiriman air bersih Bintang Air wilayah Jabodetabek">
     </div>
 </div>
 </header>
@@ -187,8 +187,13 @@
                 <div class="caption">Proyek Konstruksi</div>
             </div>
 
+            <!-- INI YANG DIUBAH -->
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="Fhotel.jpg" alt="Pengisian kolam renang hotel dan apartemen">
+                <div class="gallery-images">
+                    <img src="Fhotel.jpg" onclick="openLightbox(this)" alt="Kolam renang">
+                    <img src="KolamI.jpeg" onclick="openLightbox(this)" alt="Kolam renang">
+                    <img src="KolamR.jpeg" onclick="openLightbox(this)" alt="Kolam renang">
+                </div>
                 <div class="caption">Kolam Renang Rumah / Hotel / Apartemen</div>
             </div>
 
@@ -224,6 +229,11 @@
     </div>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
 <!-- AOS SCRIPT -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -231,18 +241,16 @@
         duration: 900,
         once: true
     });
-</script>
 
-<!-- HERO PARALLAX SCRIPT -->
-<script>
-    const hero = document.querySelector('.hero');
-    window.addEventListener('scroll', () => {
-        hero.style.setProperty('--parallax', `${window.scrollY * 0.35}px`);
-    });
+    function openLightbox(img) {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
 </script>
 
 </body>
 </html>
-
-
-
