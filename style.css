@@ -81,7 +81,6 @@ p {
     color: #e5e7eb;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -89,7 +88,7 @@ p {
 }
 
 /* =====================
-   HERO (PARALLAX)
+   HERO
 ===================== */
 .hero {
     position: relative;
@@ -99,7 +98,6 @@ p {
     padding: 120px 0;
 }
 
-/* BACKGROUND PARALLAX */
 .hero::before {
     content: "";
     position: absolute;
@@ -107,13 +105,9 @@ p {
     background-image: url("profil.jpeg");
     background-size: cover;
     background-position: center;
-    transform: translateY(var(--parallax, 0px));
-    transition: transform 0.05s linear;
-    will-change: transform;
     z-index: 1;
 }
 
-/* OVERLAY */
 .hero::after {
     content: "";
     position: absolute;
@@ -141,7 +135,6 @@ p {
     font-size: 18px;
 }
 
-/* BADGE */
 .hero-badge {
     margin-top: 18px;
     font-size: 14px;
@@ -153,7 +146,6 @@ p {
     border-radius: 999px;
 }
 
-/* HERO IMAGE (DIMATIKAN KARENA JADI BACKGROUND) */
 .hero-image img {
     display: none;
 }
@@ -170,12 +162,6 @@ p {
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
 
 .btn-primary {
@@ -206,44 +192,12 @@ p {
     border-radius: 22px;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-}
-
-.feature-item:hover {
-    transform: translateY(-6px);
 }
 
 .icon-large {
     font-size: 44px;
     color: #38bdf8;
     margin-bottom: 18px;
-}
-
-/* =====================
-   SERVICES
-===================== */
-.service-desc {
-    font-size: 18px;
-}
-
-.service-list {
-    margin-top: 40px;
-    list-style: none;
-}
-
-.service-list li {
-    padding-left: 28px;
-    position: relative;
-    margin-bottom: 14px;
-    font-size: 18px;
-}
-
-.service-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #38bdf8;
-    font-weight: bold;
 }
 
 /* =====================
@@ -261,75 +215,55 @@ p {
     padding: 32px;
     border-radius: 22px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-6px);
-}
-
-.testimonial-card h4 {
-    margin-top: 16px;
 }
 
 /* =====================
-   GALLERY
+   GALLERY / SERVICES CARD (INI YANG DISUAIKAN)
 ===================== */
-.gallery-grid {
+.service-grid {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
 }
 
-.gallery-item {
-    position: relative;
-    border-radius: 22px;
+.service-card {
+    background: #ffffff;
+    border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    background: #020617;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-/* OVERLAY */
-.gallery-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(2,6,23,0.85),
-        rgba(2,6,23,0.35),
-        rgba(2,6,23,0)
-    );
-    transition: background 0.4s ease;
-}
-
-/* DARKEN HOVER */
-.gallery-item:hover::after {
-    background: rgba(2,6,23,0.75);
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.caption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 18px;
     text-align: center;
-    font-weight: 700;
-    font-size: 16px;
-    color: #ffffff;
-    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* FOTO SIMETRIS */
+.service-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* 🔥 SEMUA FOTO SAMA */
+    object-fit: cover;
+    display: block;
+}
+
+/* ISI CARD */
+.service-card h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #64748b;
+    padding: 0 20px;
+}
+
+.btn-buy {
+    display: inline-block;
+    margin: 20px auto 26px;
+    padding: 12px 30px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 /* =====================
@@ -357,9 +291,5 @@ footer {
 
     .hero h1 {
         font-size: 32px;
-    }
-
-    .service-list li {
-        font-size: 16px;
     }
 }
