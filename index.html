@@ -176,34 +176,91 @@
     <div class="container">
         <h2 data-aos="fade-up">Galeri Layanan</h2>
 
-        <div class="gallery-grid">
-            <div class="gallery-item" data-aos="zoom-in">
+        <div class="service-grid">
+
+            <div class="service-card" data-aos="zoom-in">
                 <img src="FDepot.jpg" alt="Depot isi ulang air minum">
-                <div class="caption">Depot Isi Ulang Air Minum</div>
+                <h3>Depot Isi Ulang Air Minum</h3>
+                <p>Melayani kebutuhan depot air minum.</p>
+                <a 
+                    href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20memesan%20air%20untuk%20Depot%20Isi%20Ulang%20Air%20Minum."
+                    target="_blank"
+                    class="btn-buy"
+                >
+                    Beli
+                </a>
             </div>
 
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="Fproyek.jpg" alt="Pengiriman air untuk proyek konstruksi">
-                <div class="caption">Proyek Konstruksi</div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="Fproyek.jpg" alt="Proyek konstruksi">
+                <h3>Proyek Konstruksi</h3>
+                <p>Melayani suplai air untuk proyek.</p>
+                <a 
+                    href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20memesan%20air%20untuk%20Proyek%20Konstruksi."
+                    target="_blank"
+                    class="btn-buy"
+                >
+                    Beli
+                </a>
             </div>
 
-            <!-- INI YANG DIUBAH -->
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="gallery-images">
-                    <img src="Fhotel.jpg" onclick="openLightbox(this)" alt="Kolam renang">
-                    <img src="Kolam-r.jpeg" onclick="openLightbox(this)" alt="Kolam renang">
-                    <img src="Kolam-i.jpeg" onclick="openLightbox(this)" alt="Kolam renang">
-                </div>
-                <div class="caption">Kolam Renang Rumah / Hotel / Apartemen</div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="Fhotel.jpg" alt="Hotel">
+                <h3>Hotel</h3>
+                <p>Melayani kebutuhan hotel & apartemen.</p>
+                <a 
+                    href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20memesan%20air%20untuk%20Hotel%20atau%20Apartemen."
+                    target="_blank"
+                    class="btn-buy"
+                >
+                    Beli
+                </a>
             </div>
 
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="Findustri.jpg" alt="Suplai air untuk kebutuhan industri">
-                <div class="caption">Kebutuhan Industri</div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="Kolam-i.jpeg" alt="Kolam ikan">
+                <h3>Kolam Ikan</h3>
+                <p>Melayani pengisian kolam ikan.</p>
+                <a 
+                    href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20mengisi%20air%20untuk%20Kolam%20Ikan."
+                    target="_blank"
+                    class="btn-buy"
+                >
+                    Beli
+                </a>
             </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="Kolam-r.jpeg" alt="Kolam renang">
+                <h3>Kolam Renang</h3>
+                <p>Melayani pengisian kolam renang.</p>
+                <a 
+                    href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20mengisi%20air%20untuk%20Kolam%20Renang."
+                    target="_blank"
+                    class="btn-buy"
+                >
+                    Beli
+                </a>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="Findustri.jpg" alt="Kebutuhan industri">
+                <h3>Kebutuhan Industri</h3>
+                <p>Melayani suplai air industri.</p>
+                <a 
+                    href="https://wa.me/6282123931571?text=Halo%20Bintang%20Air,%20saya%20ingin%20memesan%20air%20untuk%20Kebutuhan%20Industri."
+                    target="_blank"
+                    class="btn-buy"
+                >
+                    Beli
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
+
+
 
 <!-- CONTACT -->
 <section id="contact" class="section-padding bg-light">
@@ -229,11 +286,6 @@
     </div>
 </footer>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-</div>
-
 <!-- AOS SCRIPT -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -241,18 +293,7 @@
         duration: 900,
         once: true
     });
-
-    function openLightbox(img) {
-        document.getElementById("lightbox-img").src = img.src;
-        document.getElementById("lightbox").style.display = "flex";
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
 </script>
 
 </body>
 </html>
-
-
