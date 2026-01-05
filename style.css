@@ -102,7 +102,7 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("profil.jpeg");
+    background-image: url("pengiriman-air-bersih-jabodetabek.jpeg");
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -293,3 +293,4 @@ footer {
         font-size: 32px;
     }
 }
+
